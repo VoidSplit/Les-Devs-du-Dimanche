@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    list-style-type: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #303394;
+    overflow-x: hidden;
+}
+section {
+    position: relative;
+}
+.lb {
+    background-color: white;
+    &-u {
+        background-color: red;
+        display: flex;
+        &-n {
+            background-color: green;
+        }
+        &-v {
+            background-color: pink;
+        }
+    }
+}

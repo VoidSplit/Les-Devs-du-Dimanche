@@ -1,0 +1,235 @@
+#landing-page {
+    nav {
+        top: 50px;
+        left: 250px;
+        position: absolute;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        .title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            span {
+                font-family: 'Bebas Neue', cursive;
+                transition: color .2s;
+            }
+            &:hover span {
+                color: #ff8652;
+            }
+        }
+        ul {
+            position: relative;
+            display: flex;
+            margin-left: 80px;
+            gap: 80px;
+            width: calc(100vw - (940px - 450px));
+            li {
+                &:hover a::after {
+                    width: 100%;
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    height: 2px;
+                    border-radius: 5px;
+                    background-color: #ff8652;
+                }
+                &.right {
+                    position: absolute;
+                    right: 0;
+                }
+                a {
+                    color: #fff;
+                    position: relative;
+                    font-family: 'Lato', sans-serif;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .mochi-img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        img {
+            width: 300px;
+        }
+    }
+    .decorations {
+        .star {
+            position: absolute;
+            color: #3D41BC;
+            z-index: -2;
+            top: 0;
+            left: 0;
+            &-1 {
+                font-size: 6rem;
+                @include starKeyframes(translateY(15vh), translateX(25vw), rotate(50deg), 1);
+                animation: starAnim1 3s infinite;
+            }
+            &-2 {
+                font-size: 15rem;
+                @include starKeyframes(translateY(60vh), translateX(40vw), rotate(800deg), 2);
+                animation: starAnim2 6s infinite;
+            }
+            &-3 {
+                font-size: 9rem;
+                @include starKeyframes(translateY(2vh), translateX(80vw), rotate(10deg), 3);
+                animation: starAnim3 5s infinite;
+            }
+            &-4 {
+                font-size: 9rem;
+                @include starKeyframes(translateY(25vh), translateX(5vw), rotate(0deg), 4);
+                animation: starAnim4 5s infinite;
+            }
+            &-5 {
+                font-size: 3rem;
+                @include starKeyframes(translateY(20vh), translateX(75vw), rotate(10deg), 5);
+                animation: starAnim5 2s infinite;
+            }
+            &-6 {
+                font-size: 20rem;
+                @include starKeyframes(translateY(50vh), translateX(75vw), rotate(56deg), 6);
+                animation: starAnim6 7s infinite;
+            }
+            &-7 {
+                font-size: 3rem;
+                @include starKeyframes(translateY(80vh), translateX(15vw), rotate(56deg), 7);
+                animation: starAnim7 2s infinite;
+            }
+        }
+        .circle--small {
+            position: absolute;
+            width: 350px;
+            aspect-ratio: 1;
+            border-radius: 100%;
+            background: linear-gradient(15deg, rgba(56,61,179,1) 0%, rgba(62,66,192,1) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            box-shadow: 0 0 50px #303394;
+            animation: homeBg 16s infinite;
+        }
+        .circle--big {
+            position: absolute;
+            width: 500px;
+            aspect-ratio: 1;
+            border-radius: 100%;
+            background: linear-gradient(0deg, rgba(48,51,148,1) 0%, rgba(62,66,192,1) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            animation: homeBg 20s infinite;
+        }
+    }
+    .informations {
+        position: absolute;
+        color: #fff;
+        top: 50%;
+        p {
+            font-size: 2rem;
+        }
+        h1 {
+            font-size: 5rem;
+        }
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #info {
+        &-1 {
+            height: 300px;
+            width: 500px;
+            transform: translate(250px, -50%);
+            .button {
+                margin-top: 15px;
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                background-color: #ff6726;
+                box-shadow: 0 0 50px hsla(18, 100%, 57%, 0.2);
+                width: 250px;
+                height: 50px;
+                border-radius: 50px;
+                align-items: center;
+                justify-content: center;
+                transition: background-color .2s, box-shadow .2s;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ff4d00;
+                    box-shadow: 0 0 50px hsla(18, 100%, 57%, 0.3);
+                }
+            }
+            .icon {
+                font-size: 1.2rem;
+                position: relative;
+                left: 40px;
+            }
+        }
+        &-2 {
+            right: 0;
+            height: 300px;
+            width: 450px;
+            transform: translate(-50px, -50%);
+        }
+    
+    }
+}
+#community {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    .box {
+        background-color: #383db3;
+        border-radius: 5px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        width: 80vw;
+        .top {
+            display: flex;
+            align-items: center;
+            .title {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 3.5rem;
+                font-weight: bold;
+                letter-spacing: 5px;
+                color: #fff;
+                margin: 20px 0 20px 100px;
+            }
+            .sub-title {
+                font-family: 'Bebas Neue', cursive;
+                font-size: 2.5rem;
+                font-weight: bold;
+                letter-spacing: 5px;
+                color: #8789db;
+                margin: 25px 15px;
+            }
+        }
+        p {
+            color: #fff;
+            padding: 5px 100px 25px 100px;
+            font-size: 1.5rem;
+            line-height: 40px;
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}

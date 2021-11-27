@@ -1,0 +1,13 @@
+@mixin starKeyframes($translateX, $translateY, $rotate, $id) {
+    @keyframes starAnim#{$id} {
+        0% {
+            transform: $translateX $translateY $rotate scale(1);
+        }
+        50% {
+            transform: $translateX $translateY $rotate scale(1.2);
+        }
+        100% {
+            transform: $translateX $translateY $rotate scale(1);
+        }
+    }
+}
