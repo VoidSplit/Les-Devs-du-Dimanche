@@ -8,10 +8,12 @@
 }
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 body {
     background-color: #303394;
     overflow-x: hidden;
+    width: 100vw;
 }
 section {
     position: relative;

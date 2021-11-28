@@ -1,7 +1,7 @@
 #landing-page {
     nav {
         top: 50px;
-        left: 250px;
+        left: 13vw;
         position: absolute;
         color: #fff;
         display: flex;
@@ -24,7 +24,7 @@
             display: flex;
             margin-left: 80px;
             gap: 80px;
-            width: calc(100vw - (940px - 450px));
+            width: calc(100vw - (13vw + 107.5px + 200px));
             li {
                 &:hover a::after {
                     width: 100%;
@@ -55,6 +55,7 @@
         justify-content: center;
         width: 100vw;
         height: 100vh;
+        z-index: -1;
         img {
             width: 300px;
         }
@@ -63,7 +64,7 @@
         .star {
             position: absolute;
             color: #3D41BC;
-            z-index: -2;
+            z-index: -3;
             top: 0;
             left: 0;
             &-1 {
@@ -112,7 +113,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: -1;
+            z-index: -2;
             box-shadow: 0 0 50px #303394;
             animation: homeBg 16s infinite;
         }
@@ -127,8 +128,9 @@
             border-right: 1px solid rgba(255, 255, 255, 0.05);
             top: 50%;
             left: 50%;
+            right: auto;
             transform: translate(-50%, -50%);
-            z-index: -2;
+            z-index: -3;
             animation: homeBg 20s infinite;
         }
     }
@@ -154,7 +156,7 @@
         &-1 {
             height: 300px;
             width: 500px;
-            transform: translate(250px, -50%);
+            transform: translate(13vw, -50%);
             .button {
                 margin-top: 15px;
                 position: relative;
@@ -184,7 +186,7 @@
             right: 0;
             height: 300px;
             width: 450px;
-            transform: translate(-50px, -50%);
+            transform: translate(-2.6vw, -50%);
         }
     
     }
@@ -233,3 +235,44 @@
         
     }
 }
+
+@media screen and (max-width: 1330px) {
+    #landing-page {
+        .mochi-img-wrapper {
+            position: relative;
+            justify-content: flex-end;
+            img {
+                margin: auto calc(((87vw - 250px) / 2) - 150px);
+            }
+        }
+        #info {
+            &-2 {
+                height: auto;
+                width: 80vw;
+                bottom: 100px;
+                top: auto;
+                transform: translate(-10vw, 0);
+            }
+        }
+        .decorations {
+            .circle--small {
+                top: 50%;
+                left: auto;
+                right: calc(((87vw - 250px) / 2) - 175px);
+                transform: translate(0, -50%);
+                animation: homeBgtablet 16s infinite;
+                
+            }
+            .circle--big {
+                top: 50%;
+                left: auto;
+                right: calc(((87vw - 250px) / 2) - 250px);
+                transform: translate(0, -50%);
+                animation: homeBgtablet 20s infinite;
+            }
+        }
+    }
+}/*
+@media screen and (max-width: 870px) {
+    
+}*/
