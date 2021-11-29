@@ -1,4 +1,5 @@
 #landing-page {
+    min-height: auto;
     nav {
         top: 50px;
         left: 13vw;
@@ -20,6 +21,7 @@
             }
         }
         ul {
+            display: block;
             position: relative;
             display: flex;
             margin-left: 80px;
@@ -46,6 +48,9 @@
                     font-family: 'Lato', sans-serif;
                     font-size: 1.2rem;
                 }
+            }
+            &.responsive {
+                display: none;
             }
         }
     }
@@ -247,11 +252,12 @@
         }
         #info {
             &-2 {
-                height: auto;
+                height: 217px;
                 width: 80vw;
-                bottom: 100px;
+                bottom: 0;
                 top: auto;
                 transform: translate(-10vw, 0);
+                justify-content: flex-start;
             }
         }
         .decorations {
@@ -272,7 +278,77 @@
             }
         }
     }
-}/*
+}
 @media screen and (max-width: 870px) {
-    
-}*/
+    #landing-page {
+        nav {
+            ul.responsive {
+                flex-direction: row-reverse;
+                font-size: 2rem;
+                display: flex;
+            } 
+            ul:not(.responsive) {
+                display: none;
+            } 
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    #landing-page {
+        .mochi-img-wrapper {
+            justify-content: center;
+            align-items: flex-start;
+            img {
+                margin: 12vh;
+                max-width: 80vw;
+            }
+        }
+        #info {
+            &-1 {
+                width: 250px;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            &-2 {
+                height: 180px;
+                p {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .decorations {
+            .circle--small {
+                top: 32%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: homeBg 16s infinite;
+                
+            }
+            .circle--big {
+                top: 32%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: homeBg 16s infinite;
+            }
+        }
+    }
+    #community {
+        .box {
+            .top {
+                .title {
+                    text-align: center;
+                    margin: 20px 40px 20px 40px;
+                    font-size: 2.5rem;
+                }
+                .sub-title {
+                    font-size:2rem;
+
+                }
+            }
+            p {
+                padding: 5px 20px 25px 20px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
