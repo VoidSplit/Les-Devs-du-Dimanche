@@ -6,3 +6,16 @@
         transform: translate(-50%, -50%) scale(1.2);
     }
 }
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        z-index: -5;
+    }
+}
