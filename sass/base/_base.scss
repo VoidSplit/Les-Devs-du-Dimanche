@@ -1,33 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    list-style-type: none;
+    font-family: "Lato", sans-serif;
 }
 html {
     scroll-behavior: smooth;
-    width: 100vw;
 }
 body {
-    overflow: hidden scroll;
-    background-color: #303394;
-    width: 100vw;
-}
-section {
-    position: relative;
-}
-.lb {
-    background-color: white;
-    &-u {
-        background-color: red;
-        display: flex;
-        &-n {
-            background-color: green;
-        }
-        &-v {
-            background-color: pink;
-        }
-    }
+    background-color: $dark-blue;
 }
