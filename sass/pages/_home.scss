@@ -67,46 +67,46 @@
     }
     .decorations {
         .star {
-            position: absolute;
-            color: #3D41BC;
-            z-index: -3;
-            top: 0;
-            left: 0;
-            &-1 {
-                font-size: 6rem;
-                @include starKeyframes(translateY(15vh), translateX(25vw), rotate(50deg), 1);
-                animation: starAnim1 3s infinite;
-            }
-            &-2 {
-                font-size: 15rem;
-                @include starKeyframes(translateY(60vh), translateX(40vw), rotate(800deg), 2);
-                animation: starAnim2 6s infinite;
-            }
-            &-3 {
-                font-size: 9rem;
-                @include starKeyframes(translateY(2vh), translateX(80vw), rotate(10deg), 3);
-                animation: starAnim3 5s infinite;
-            }
-            &-4 {
-                font-size: 9rem;
-                @include starKeyframes(translateY(25vh), translateX(5vw), rotate(0deg), 4);
-                animation: starAnim4 5s infinite;
-            }
-            &-5 {
-                font-size: 3rem;
-                @include starKeyframes(translateY(20vh), translateX(75vw), rotate(10deg), 5);
-                animation: starAnim5 2s infinite;
-            }
-            &-6 {
-                font-size: 20rem;
-                @include starKeyframes(translateY(50vh), translateX(75vw), rotate(56deg), 6);
-                animation: starAnim6 7s infinite;
-            }
-            &-7 {
-                font-size: 3rem;
-                @include starKeyframes(translateY(80vh), translateX(15vw), rotate(56deg), 7);
-                animation: starAnim7 2s infinite;
-            }
+                position: absolute;
+                color: #3D41BC;
+                z-index: -3;
+                top: 0;
+                left: 0;
+                &-1 {
+                    font-size: 6rem;
+                    @include starKeyframes(translateY(15vh), translateX(25vw), rotate(50deg), 1);
+                    animation: starAnim1 3s infinite;
+                }
+                &-2 {
+                    font-size: 15rem;
+                    @include starKeyframes(translateY(60vh), translateX(40vw), rotate(800deg), 2);
+                    animation: starAnim2 6s infinite;
+                }
+                &-3 {
+                    font-size: 9rem;
+                    @include starKeyframes(translateY(2vh), translateX(80vw), rotate(10deg), 3);
+                    animation: starAnim3 5s infinite;
+                }
+                &-4 {
+                    font-size: 9rem;
+                    @include starKeyframes(translateY(25vh), translateX(5vw), rotate(0deg), 4);
+                    animation: starAnim4 5s infinite;
+                }
+                &-5 {
+                    font-size: 3rem;
+                    @include starKeyframes(translateY(20vh), translateX(75vw), rotate(10deg), 5);
+                    animation: starAnim5 2s infinite;
+                }
+                &-6 {
+                    font-size: 20rem;
+                    @include starKeyframes(translateY(50vh), translateX(75vw), rotate(56deg), 6);
+                    animation: starAnim6 7s infinite;
+                }
+                &-7 {
+                    font-size: 3rem;
+                    @include starKeyframes(translateY(80vh), translateX(15vw), rotate(56deg), 7);
+                    animation: starAnim7 2s infinite;
+                }
         }
         .circle--small {
             position: absolute;
