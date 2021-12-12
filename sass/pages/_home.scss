@@ -3,60 +3,6 @@
     max-width: 100vw;
     overflow-x: hidden;
     position: relative;
-    nav {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        height: 170px;
-        margin: 0 200px;
-        .logo {
-            font-family: "Bebas Neue", cursive;
-            font-size: 3.5rem;
-            font-weight: bold;
-            letter-spacing: 5px;
-            span {
-                font-family: "Bebas Neue", cursive;
-                transition: color .2s;
-            }
-            &:hover span {
-                color: $orange;
-            }
-        }
-        ul {
-            display: flex;
-            width: calc(100% - 215px);
-            gap: 80px;
-            padding-left: 80px;
-            li {
-                list-style-type: none;
-                a {
-                    position: relative;
-                    color: #fff;
-                    font-family: "Lato",sans-serif;
-                    font-size: 1.2rem;
-                    text-decoration: none;
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        height: 2px;
-                        width: 100%;
-                        left: 0;
-                        bottom: -5px;
-                    }
-                    &:hover::after {
-                        background-color: $orange;
-                    }
-                }
-                
-                &.right {
-                    margin: auto 0 auto auto
-                }
-            }
-        }
-        .responsive {
-            display: none;
-        }
-    }
     .inner {
         max-width: 100vw;
         height: calc(100vh - 340px);
@@ -262,6 +208,154 @@
         }
     }
 }
+#actuality {
+    position: relative;
+    padding-bottom: 113px;
+    .top {
+        display: flex;
+        align-items: center;
+        .title {
+            font-family: "Bebas Neue",cursive;
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: #fff;
+            margin: 20px 0 20px 100px;
+        }
+    }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 113px);
+        .inner {
+            border-radius: 5px;
+            width: calc(100vw - 200px);
+            border-radius: 5px;
+            display: grid;
+            grid-template:
+                "a a a" auto
+                "d b b" auto
+                "d e f" auto/1fr 1fr 1fr;
+            height: 80vh;
+            gap: 20px;
+            > * {
+                box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+                border-radius: 5px;
+                overflow: hidden;
+                position: relative;
+            }
+            .events {
+                position: relative;
+                grid-area: a;
+                background: rgb(255,0,0);
+                background: -moz-linear-gradient(121deg, rgba(255,0,0,1) 0%, rgba(203,68,68,1) 100%);
+                background: -webkit-linear-gradient(121deg, rgba(255,0,0,1) 0%, rgba(203,68,68,1) 100%);
+                background: linear-gradient(121deg, rgba(255,0,0,1) 0%, rgba(203,68,68,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff0000",endColorstr="#cb4444",GradientType=1);
+                cursor: pointer;
+                .inner-card {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    .wrapper-card {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        .ornament {
+                            margin: 0 0 0 auto;
+                            img {
+                                height: 100%;
+                                -webkit-filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
+                                filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
+                            }
+                        }
+                        .informations {
+                            position: relative;
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            padding-left: 100px;
+                            gap: 20px;
+                            h1 {
+                                font-size: 3rem;
+                                color: #fff;
+                            }
+                            p {
+                                color: #fff;
+                                width: 100%;
+                                font-size: 1.3rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .card {
+                background-color: $secondary-blue;
+                position: relative;
+                transition: background-color .5s;
+                cursor: pointer;
+                &:hover {
+                    background-color: $orange;
+                }
+                .inner-card {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    .wrapper-card {
+                        z-index: 2;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        color: #fff;
+                        h1.title {
+                            height: 80px;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 20px;
+                            font-size: 1.6rem;
+                            z-index: 1;
+                        }
+                        p.description {
+                            font-size: 1.3rem;
+                            padding: 5px 25px;
+                            z-index: 1;
+                        }
+                        .icon {
+                            position: absolute;
+                            z-index: 0;
+                            font-size: 20rem;
+                            right: 0;
+                            top: -50px;
+                            color: rgba(255, 255, 255, 0.3);
+                            transform: rotateZ(-25deg);
+                            z-index: 0;
+                        }
+                    }
+                }
+            }
+            .podium {
+                grid-area: b;
+            }
+            .mochi-news {
+                grid-area: d;
+                .inner-card .wrapper-card .icon {
+                    top: 50%;
+                    transform: translateY(-50%) rotateZ(-25deg);
+                }
+            }
+            .box {
+                grid-area: e;
+            }
+            .event-list {
+                grid-area: f;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1360px) {
     #landing-page {
         .inner {
@@ -301,26 +395,75 @@
             font-size: 1.3rem;
         }
     } 
+    #actuality {
+        .wrapper {
+            .inner {
+                .events {
+                    .inner-card {
+                        .wrapper-card {
+                            .informations {
+                                gap: 10px;
+                                padding-left: 40px;
+                                .title {
+                                    font-size: 2.2rem;
+                                }
+                                .description {
+                                    font-size: 1.1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 1135px) {
-    #landing-page {
-        nav {
-            .desktop {
-                display: none;
-            }
-            .responsive {
-                display: block;
-                margin-left: auto;
-                font-size: 2rem;
+    nav {
+        .desktop {
+            display: none;
+        }
+        .responsive {
+            display: block;
+            margin-left: auto;
+            font-size: 2rem;
+        }
+    }
+    #actuality {
+        .wrapper {
+            .inner {
+                grid-template:
+                    "a" auto
+                    "b" auto
+                    "d" auto
+                    "e" auto
+                    "f" auto/1fr;
+                height: 100vh;
+                .events {
+                    .inner-card {
+                        .wrapper-card {
+                            .informations {
+                                gap: 10px;
+                                padding-left: 40px;
+                                .title {
+                                    font-size: 2.2rem;
+                                }
+                                .description {
+                                    font-size: 1.1rem;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 @media screen and (max-width: 900px) {
+    nav {
+        margin: 0 100px;
+    }
     #landing-page {
-        nav {
-            margin: 0 100px;
-        }
         .inner {
             grid-template: 
             "b" auto
@@ -334,6 +477,34 @@
             .description {
                 margin: 25px 10%;
                 padding: 0;
+            }
+        }
+    }
+    #actuality {
+        .top {
+            .title {
+                margin: 20px auto;
+                font-size: 8vw;
+                text-align: center;
+            }
+        }
+        .wrapper {
+            .inner {
+                width: 100%;
+                height: 150vh;
+                .events {
+                    .inner-card {
+                        .wrapper-card {
+                            .informations {
+                                padding: 20px;
+                                gap: 0;
+                            }
+                            .ornament {
+                                display: none;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
