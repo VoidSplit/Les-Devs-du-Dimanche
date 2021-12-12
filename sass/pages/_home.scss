@@ -420,6 +420,44 @@
 }
 @media screen and (max-width: 1135px) {
     nav {
+        position: relative;
+        &.active {
+            .desktop {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                padding-left: 0;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                transform: translateY(100%) translateX(-50%);
+                z-index: 5;
+                background-color: $light-blue;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                border-radius: 5px;
+                li {
+                    &:hover {
+                        background-color: $orange;
+                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 50px;;
+                    }
+                }
+                .right {
+                    margin: 0;
+                }
+            }
+        }
         .desktop {
             display: none;
         }

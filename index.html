@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <title>Document</title>
     </head>
-    <body>
+    <body><!--
         <div class="loader">
             <div class="box">
                 <h1>Mochi est entrain de charger la page !</h1>
             </div>
-        </div>
+        </div>-->
         <div id="app">
             <section id="landing-page">
                 <nav>
@@ -30,7 +30,7 @@
                         </li>
                     </ul>
                     <div class="responsive">
-                        <div class="menu">
+                        <div id="menu" class="menu">
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                 </div>
             </section>
         </div>
-
+        <script src="public/js/menu.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script>
             const app = new Vue({
