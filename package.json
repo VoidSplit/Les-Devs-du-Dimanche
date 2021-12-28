@@ -6,7 +6,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {},
-  "scripts": {"sass": "sass --watch ./sass/main.scss:public/css/style.css --style compressed",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css --style compressed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "VoidSplit",
