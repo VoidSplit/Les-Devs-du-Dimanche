@@ -1,7 +1,7 @@
 #games {
     margin: auto; 
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     .podium {
         margin: auto;
         width: 85vw;
@@ -23,7 +23,7 @@
                 font-weight: 600;
                 color: #fff;
                 .image {
-                    height: 100px;
+                    aspect-ratio: 1/1;
                     width: 100px;
                     overflow: hidden;
                     border-radius: 100%;
@@ -109,6 +109,66 @@
                     }
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 1550px) {
+    #games {
+        .podium {
+            flex-direction: column;
+            .table {
+                .content {
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 660px) {
+    #games {
+        .podium {
+            width: 100%;
+            .inner {
+                margin: 50px 0;
+                width: 100%;
+                .second {
+                    width: 30%;
+                    .profil {
+                        .image {
+                            max-width: 100px;
+                            width: 90%;
+                        }
+                    }
+                    .background {
+                        width: 100%
+                    }
+                }
+                .first {
+                    width: 30%;
+                    .profil {
+                        .image {
+                            max-width: 100px;
+                            width: 90%;
+                        }
+                    }
+                    .background {
+                        width: 100%
+                    }
+                }
+                .third {
+                    width: 30%;
+                    .profil {
+                        .image {
+                            max-width: 100px;
+                            width: 90%;
+                        }
+                    }
+                    .background {
+                        width: 100%
+                    }
+                }
+            }
+            
         }
     }
 }
