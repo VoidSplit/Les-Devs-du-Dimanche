@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Jouez aux jeux de LDDD">
+        <meta name="author" content="VoidSplit">
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../images/Mochi.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <title>Les Devs du Dimanche</title>
+    </head>
+    <body>
+        <div class="loader" id="loader">
+            <div class="box">
+                <h1>Mochi est entrain de charger la page !</h1>
+            </div>
+        </div>
+        <section id="games">
+            <nav>
+                <a href="../../index.html" class="logo">LD<span>D</span>D</a>
+                <ul class="desktop">
+                    <li>
+                        <a href="../../index.html#landing-page">Mochi</a>
+                    </li>
+                    <li>
+                        <a href="../../index.html#community">Communauté</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Jeux</a>
+                    </li>
+                    <li class="right">
+                        <a href="#">Se connecter</a>
+                    </li>
+                </ul>
+                <div class="responsive">
+                    <div id="menu" class="menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+            <div class="podium">
+                <div class="inner">
+                    <div class="second">
+                        <div class="profil">
+                            <div class="image">
+                                <img src="../images/Mochi.png" alt="Profil du joueur" srcset="../images/Mochi.png">
+                            </div>
+                            <div class="username">
+                                VoidSplit
+                            </div>
+                        </div>
+                        <div class="background">
+                            <h1>2</h1>
+                        </div>
+                    </div>
+                    <div class="first">
+                        <div class="profil">
+                            <div class="image">
+                                <img src="../images/Mochi.png" alt="Profil du joueur" srcset="../images/Mochi.png">
+                            </div>
+                            <div class="username">
+                                VoidSplit
+                            </div>
+                        </div>
+                        <div class="background">
+                            <h1>1</h1>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="profil">
+                            <div class="image">
+                                <img src="../images/Mochi.png" alt="Profil du joueur" srcset="../images/Mochi.png">
+                            </div>
+                            <div class="username">
+                                VoidSplit
+                            </div>
+                        </div>
+                        <div class="background">
+                            <h1>3</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="infos">
+                        <p>Pseudo</p>
+                        <p>Points de jeu</p>
+                    </div>
+                    <div class="content">
+                        <div class="item">
+                            <p class="username">VoidSplit</p>
+                            <p class="score">250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-game"></div>
+            <div class="game-list">
+                <div class="game"></div>
+            </div>
+        </section>
+    </body>
+    <script src="../js/menu.js"></script>
+    <script src="../js/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        const app = new Vue({
+            el: '#app'
+        })
+    </script>
+</html>

@@ -14,7 +14,7 @@
         <title>Les Devs du Dimanche</title>
     </head>
     <body>
-        <div class="loader">
+        <div id="loader" class="loader">
             <div class="box">
                 <h1>Mochi est entrain de charger la page !</h1>
             </div>
@@ -22,13 +22,16 @@
         <div id="app">
             <section id="landing-page">
                 <nav>
-                    <div class="logo">LD<span>D</span>D</div>
+                    <a href="#" class="logo">LD<span>D</span>D</a>
                     <ul class="desktop">
                         <li>
                             <a href="#landing-page">Mochi</a>
                         </li>
                         <li>
                             <a href="#community">Communauté</a>
+                        </li>
+                        <li>
+                            <a href="public/pages/games.html">Jeux</a>
                         </li>
                         <li class="right">
                             <a href="#">Se connecter</a>
@@ -148,6 +151,7 @@
             </section>
         </div>
         <script src="public/js/menu.js"></script>
+        <script src="public/js/loader.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script>
             const app = new Vue({
