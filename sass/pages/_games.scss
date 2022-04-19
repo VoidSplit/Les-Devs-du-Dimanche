@@ -111,6 +111,72 @@
             }
         }
     }
+    .add-game {
+        width: 85vw;
+        margin: 50px auto 30px;
+        padding: 0 50px;
+        .inner {
+            padding: 25px 80px;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            --gradient-color-1:#0066ff;
+            --gradient-color-2:#7700ff;
+            background: var(--gradient-color-1);
+            background: -moz-linear-gradient(270deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+            background: -webkit-linear-gradient(270deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+            background: linear-gradient(270deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0070ff",endColorstr="#00d7ff",GradientType=1);
+            box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+            .text {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 30px;
+                
+                h1 {
+                    color: #fff;
+                    font-size: 2rem;
+                }
+
+                p {
+                    color: rgba(255, 255, 255, 0.97);
+                }
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                    a.btn {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        span {
+                            padding: 15px 25px;
+                            border-radius: 5px;
+                            background-color: #eee;
+                            color: #000;
+                        }
+                    }
+                }
+            }
+            .icon {
+                margin: 0 0 0 auto;
+                position: relative;
+                aspect-ratio: 1;
+                display: flex;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-size: 8rem;
+                i {
+                    transform: rotateZ(-8deg);
+                }
+            }
+        }
+    }
     .game-list {
         .label {
             font-size: 1.5rem;
